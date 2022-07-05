@@ -1,0 +1,42 @@
+{% load static %}
+
+
+<section id="menu" class="menu section-bg">
+    <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+            <h2>Menu</h2>
+            <p>Check Our Tasty Menu</p>
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+            <div class="col-lg-12 d-flex justify-content-center">
+                <ul id="menu-flters">
+                    <li data-filter="*" class="filter-active">All</li>
+                    <li data-filter=".filter-starters">Starters</li>
+                    <li data-filter=".filter-salads">Salads</li>
+                    <li data-filter=".filter-specialty">Specialty</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row menu-container" data-aos="fade-up" data-aos-delay="200">
+
+            <!--filter-starters start-->
+            {% include 'restaurant/components/sub_components/__menu_filter-starters.html' %}
+            <!--filter-starters end-->
+
+
+            <!--filter-salads start-->
+            {% include 'restaurant/components/sub_components/__menu_filter-salads.html' %}
+            <!--filter-salads end-->
+
+
+            <!--filter-specialty start-->
+            {% include 'restaurant/components/sub_components/__menu_filter-specialty.html' %}
+            <!--filter-specialty end-->
+
+        </div>
+
+    </div>
+</section>
